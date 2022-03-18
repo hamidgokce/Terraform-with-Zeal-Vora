@@ -33,3 +33,12 @@ resource "aws_ebs_volume" "db_ebs" {
   tags = local.common_tags
 }
 ```
+
+<!-- Important Pointers for Local Values:
+
+Local values can be helpful to avoid repeating the same values or expressions multiple times in a configuration.
+
+If overused they can also make a configuration hard to read by future maintainers by hiding the actual values used
+
+Use local values only in moderation, in situations where a single value or result is used in many places and that value is likely to be changed in the future. -->
+
