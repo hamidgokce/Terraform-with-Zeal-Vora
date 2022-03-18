@@ -19,6 +19,12 @@ resource "aws_iam_user" "lb" {
   count = 3
   path = "/system/"
 }
+
+# resource "aws_iam_user" "lb" {
+#   name = "loadbalancer.${count.index}"
+#   count = 3
+#   path = "/system/"
+# }
 ```
 ### count-paremeter.tf
 
