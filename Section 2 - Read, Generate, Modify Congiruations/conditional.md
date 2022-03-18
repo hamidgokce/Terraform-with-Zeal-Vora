@@ -15,7 +15,7 @@ variable "istest" {}
 resource "aws_instance" "dev" {
    ami = "ami-082b5a644766e0e6f"
    instance_type = "t2.micro"
-   count = var.istest == true ? 3 : 0
+   count = var.istest == true ? 3 : 0 # if "isttest" is true, run 3 ec2s
 }
 
 resource "aws_instance" "prod" {
