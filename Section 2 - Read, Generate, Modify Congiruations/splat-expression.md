@@ -19,4 +19,7 @@ output "arns" {
   value = aws_iam_user.lb[*].arn
 }
 ```
+<!-- The terraform graph command is used to generate a visual representation of either a configuration or execution plan 
 
+The output of terraform graph is in the DOT format, which can easily be converted to an image. -->
+ 

@@ -5,10 +5,25 @@
 ```sh
 
 provider "aws" {
-  region     = "ap-southeast-1"
+  region     = var.region
   access_key = "YOUR-ACCESS-KEY"
   secret_key = "YOUR-SECRET-KEY"
 }
+# terraform {
+#   required_providers {
+#     aws = {
+#       source  = "hashicorp/aws"
+#       version = "4.5.0"
+#     }
+#   }
+# }
+
+# provider "aws" {
+#   # Configuration options
+#   region     = "us-west-2"
+#  access_key = "PUT-YOUR-ACCESS-KEY-HERE "
+#   secret_key = "PUT-YOUR-SECRET-KEY-HERE "
+# }
 
 data "aws_ami" "app_ami" {
   most_recent = true
@@ -26,3 +41,14 @@ resource "aws_instance" "instance-1" {
    instance_type = "t2.micro"
 }
 ```
+<!-- https://www.terraform.io/language/data-sources
+
+data "aws_ami" "example" {
+  most_recent = true
+
+  owners = ["self"]
+  tags = {
+    Name   = "app-server"
+    Tested = "true"
+  }
+} -->
