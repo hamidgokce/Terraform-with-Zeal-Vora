@@ -50,7 +50,7 @@ resource "aws_security_group" "allow_ssh" {
 
 
 resource "aws_instance" "myec2" {
-   ami = "ami-0b1e534a4ff9019e0"
+   ami = "ami-00ee4df451840fa9d"
    instance_type = "t2.micro"
    key_name = "ec2-key"
    vpc_security_group_ids  = [aws_security_group.allow_ssh.id]
